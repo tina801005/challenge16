@@ -1,0 +1,201 @@
+:root{
+/*	color*/
+	--Blue: hsl(223, 87%, 63%);
+	--PaleBlue: hsl(223, 100%, 88%);
+	--LightRed: hsl(354, 100%, 66%);
+	--Gray: hsl(0, 0%, 59%);
+	--VeryDarkBlue: hsl(209, 33%, 12%);
+
+
+
+/*fontsize:20px,fontweight:300,600,700*/
+}
+
+
+*,*::before,*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Libre Franklin", serif;
+
+/*	border: solid 1px #ccc;*/
+}
+
+html{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body{
+	padding: 2rem;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.container{
+	width: 100%;
+	max-width: 600px;
+}
+
+.page{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.logo{
+	margin-top: 3rem;
+}
+
+.content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 1.5rem;
+}
+
+.content h1{
+	font-weight: 300;
+	font-size: clamp(1.7rem, 5vw, 2.5rem);
+	color: var(--Gray);
+	
+}
+
+.content h1 span{
+	font-weight: 700;
+	color: var(--VeryDarkBlue);
+}
+
+.content p{
+	color: var(--VeryDarkBlue);
+}
+
+.subscribeBox{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.inputbox{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	max-width: 600px;
+}
+
+.email{
+	width: 100%;
+	padding: 1rem;
+	border-radius: 30px;
+	border: 1px solid var(--Gray);
+	outline: none;
+}
+
+.email::placeholder{
+	color: var(--Gray);
+	font-weight: 300;
+}
+
+.btn_send{
+	width: 30%;
+	max-width: 400px;
+	padding: 1rem 2rem;
+	border-radius: 30px;
+	border: none;
+	background-color: var(--Blue);
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	box-shadow: 0px 5px 8px var(--PaleBlue);
+	transition: 0.3s;
+}
+
+.btn_send:hover{
+	background-color: hsl(223, 87%, 75%);
+}
+
+.verify{
+	color: var(--LightRed);
+	width: 90%;
+	display: none;
+	font-size: 0.8rem;
+	font-style: oblique;
+}
+
+
+.dashboard{
+	display: grid;
+	place-items: center;
+}
+
+.dashboard img{
+	width: 100%;
+}
+
+.socialmedia{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.2rem;
+}
+
+.icon{
+	padding: 0.3rem;
+	border-radius: 50%;
+	color: var(--Blue);
+	cursor: pointer;
+}
+
+.icon:hover{
+	background-color: var(--Blue);
+	color: white;
+}
+
+.footer{
+	margin-bottom: 3rem;
+}
+
+.footer p{
+	color: var(--Gray);
+	font-size: 0.8rem;
+}
+
+@media screen and (max-width:900px){
+
+	.subscribeBox{
+		display: flex;
+		flex-direction: column;
+	}
+	.inputbox{
+		width: 100%;
+	}
+	.btn_send{
+		width: 100%;
+		max-width: 700px;
+	}
+	.verify{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width:450px){
+
+	.inputbox{
+		width: 100%;
+	}
+	.btn_send{
+		width: 100%;
+	}
+}
